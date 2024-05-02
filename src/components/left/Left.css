@@ -1,0 +1,148 @@
+
+main .container .left{
+    height: max-content;
+    position: sticky;
+    top: var(--sticky-top-left);
+}
+
+main .container .left .profile{
+    padding: var(--card-padding);
+    background: var(--color-white);
+    border-radius: var(--card-border-radius);
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    width: 100%;
+}
+
+.left .sidebar{
+    margin-top: 1rem;
+    background: var(--color-white);
+    border-radius: var(--card-border-radius);
+}
+
+.left .sidebar .menu-item{
+    display: flex;
+    cursor: pointer;
+    height: 4rem;
+    align-items: center;
+    translate: all 300ms ease;
+    position: relative;
+}
+
+.left .sidebar .menu-item:hover{
+background: var(--color-light);
+}
+
+.left .sidebar .menu-item i {
+    font-size: 1.4rem;
+    color: var(--color-gray);
+    margin-left: 2rem;
+    position: relative;
+}
+
+.left .sidebar .notification-count{
+    background: var(--color-danger);
+    color: white;
+    font-size: 1rem;
+    width: 20px;
+    border-radius:50%;
+    padding: 0.1rem, 0.4rem;
+    position: absolute;
+    top: -0.5rem;
+    left:1rem;
+    text-align: center;
+}
+
+.left .sidebar .active{
+    background: var(--color-light)
+}
+
+.left .sidebar h3{
+    margin-left: 0.5rem;
+    font-size: 1rem;
+}
+
+.left .sidebar .active h3,
+.left .sidebar .active i{
+    color:var(--color-primary);
+}
+
+.left .sidebar .active::before{
+    content: "";
+    display: block;
+    width:0.5rem;
+    height: 100%;
+    position: absolute;
+    background: var(--color-primary);
+}
+
+.left .sidebar .menu-item:first-child.active{
+    border-top-left-radius: var(--card-border-radius);
+    overflow: hidden;
+}
+
+.left .sidebar .menu-item:last-child.active{
+    border-top-left-radius: var(--card-border-radius);
+    overflow: hidden;
+}
+
+.left .btn {
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+}
+.notifications-popup{
+    display: none;
+}
+
+/* Media queries for small laptops and big tabs*/
+@media screen and (max-width:1200px) {
+    .container{
+        width:96%;
+    }
+    .main .container{
+        grid-template-columns: 6rem auto 30vw;
+        gap: 1rem;
+    }
+
+    .left{
+        width: 5rem;
+        z-index: 5;
+    }
+    main .container .left .profile{
+        display: none;;
+    }
+    .sidebar h3{
+        display: none;
+    }
+    .left .btn{
+        display: none;
+    }
+}
+
+@media screen and (max-width:992px) {
+   
+    nav .search-bar{
+        display:none;
+    } 
+    main .container{
+        max-width: 100%;
+        grid-template-columns: 0 auto 1rem;
+        overflow-x: hidden;
+    }
+    main .container .left{
+        grid-column: 3/5;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+    }
+    main .container .middle{
+        grid-column: 1/3;
+    }
+    main .container .right{
+        display: none;
+    }
+  
+}
