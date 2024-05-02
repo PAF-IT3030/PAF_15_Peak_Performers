@@ -1,0 +1,60 @@
+/* Navigation bar */
+nav {
+    width: 100%;
+    background-color: var(--color-primary);
+    padding: 0.7rem 0;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    display: block;
+}
+
+nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Search bar */
+.search-bar {
+    background: var(--color-light);
+    border-radius: 20px; /* Changed border radius for a softer look */
+    padding: 0.5rem; /* Adjusted padding for better proportion */
+    display: flex; /* Make search bar flex container */
+    align-items: center; /* Center items vertically */
+}
+
+.search-bar input[type="search"] {
+    background: transparent;
+    width: 30vw;
+    font-size: 1rem; /* Increased font size for better readability */
+    color: var(--color-dark);
+    border: none; /* Removed border for a cleaner look */
+    outline: none; /* Removed outline */
+    padding: 0.3rem; /* Adjusted padding */
+}
+
+nav .search-bar input[type="search"]::placeholder {
+    color: var(--color-gray);
+}
+
+/* Create button */
+.create {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Reduced gap between elements */
+}
+
+.create button {
+    background-color: var(--color-secondary); /* Changed button background color */
+    color: var(--color-white); /* Changed text color */
+    border: none; /* Removed border */
+    padding: 0.5rem 1rem; /* Adjusted padding */
+    border-radius: 5px; /* Added border radius for a rounded button */
+    cursor: pointer; /* Added cursor pointer */
+    transition: background-color 0.3s ease; /* Added transition for smooth hover effect */
+}
+
+.create button:hover {
+    background-color: var(--color-secondary-dark); /* Darkened background color on hover */
+}

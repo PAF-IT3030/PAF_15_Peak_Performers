@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+:root{
+    --color-white: hsl(252,30%,100%);
+    --color-light: hsl(252,30%,95%);
+    --color-gray: hsl(252,15%,65%);
+    --color-primary: hsl(252,75%,60%);
+    --color-seconday: hsl(252,100%,90%);
+    --color-success: hsl(120,95%,60%);
+    --color-danger: hsl(0,95%,65%);
+    --color-dark: hsl(252,30%,17%);
+    --color-black: hsl(252,30%,10%);
+
+    --border-radius: 2rem;
+    --card-border-radius:1rem;
+    --btn-padding: 0.6rem 2rem;
+    --search-padding: 0.6rem 1rem;
+    --card-padding:1rem;
+
+    --sticky-top-left: 5.4rem;
+    --sticky-top-right:-18rem;
+}
+
+*,*::before,*::after{
+    margin:0;
+    padding:0;
+    outline:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+}
+
+body{
+    font-family: "Poppings",sans-serif;
+    color: var(--color-dark);
+    background: var(--color-light);
+    overflow-x: hidden;
+}
+/*General Styles */
+.container{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.profile-photo{
+  width: 2.7rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+img{
+  display: block;
+  width: 100%;
+}
+
+.btn{
+  display: inline-block;
+  padding: var(--btn-padding);
+  font-weight: 500;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all 300ms ease;
+  font-size: 0.9rem;
+}
+
+.btn:hover{
+  opacity: 0.8;
+}
+
+.btn-primary{
+  background: var(--color-primary);
+  color:white;
+}
+
+.text-bold{
+  font-weight: 500;
+}
+
+.text-muted{
+  color: var(--color-gray);
+}
+main{
+  position: relative;
+  top: 5.4rem;
+}
+
+main .container{
+  display: grid;
+  grid-template-columns:  18vw auto 20vw;
+  column-gap: 2rem;
+  position: relative;
+}
