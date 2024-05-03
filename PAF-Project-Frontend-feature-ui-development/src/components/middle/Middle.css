@@ -1,0 +1,264 @@
+
+/* middle */
+
+.middle .stories {
+    display: flex;
+    justify-content: space-between;
+    height: 12rem;
+    gap:0.5rem;
+  
+}
+
+
+.middle .stories .story{
+    display: flex;
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    background: green;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 0.75rem;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.middle .stories .story::before{
+    content:"";
+    display: block;
+    width: 100%;
+    height: 5rem;
+    background: linear-gradient(transparent,rgba(0,0,0,0.75));
+    position: absolute;
+    bottom:0;
+
+}
+
+.middle .stories .story .name{
+    z-index: 2;
+}
+
+.middle .stories .story:nth-child(1){
+    background: url("../../images/story-1.jpg") no-repeat center/cover;
+
+}
+
+.middle .stories .story:nth-child(2){
+    background: url("../../images/story-2.jpg") no-repeat center/cover;
+
+}
+
+.middle .stories .story:nth-child(3){
+    background: url("../../images/story-3.jpg") no-repeat center/cover;
+
+}
+.middle .stories .story:nth-child(4){
+    background: url("../../images/story-4.jpg") no-repeat center/cover;
+
+}
+
+.middle .stories .story:nth-child(5){
+    background: url("../../images/story-5.jpg") no-repeat center/cover;
+
+}
+
+.middle .story .profile-photo{
+    width: 2rem;
+    height: 2rem;
+    align-self: start;
+    border: 3px solid var(--color-primary);
+}
+.middle .attach{
+    position: relative;
+    height: 20px;
+    width: 20px;
+   
+    margin-right: 20px;
+    margin-bottom: 2px;
+
+}
+.middle .attach span {
+    position:relative;
+    display: block;
+    height: 10px;
+    width: 10px;
+   
+}
+.middle .attach span i {
+    font-size: 20px;
+}
+.middle .attach span i:hover{
+    cursor: pointer;
+}
+.middle #preview{
+    background:var(--color-white);
+    padding:0.4rem var(--card-padding);
+    border-radius: var(--border-radius);
+    margin-top: 10px;
+    position:relative;
+  
+}
+.middle #preview img{
+    padding:10px;
+    border-radius: var(--border-radius);
+    position: relative;
+    
+}
+#preview .button{
+    display: flex;
+    justify-content: end;
+    margin-right: 25px;
+    
+}
+
+#preview span{
+  
+    
+    top: 15px;
+    left: 25px;
+    color: var(--color-dark);
+   
+    z-index: 5;
+    border-radius: 50%;
+    cursor: pointer;
+   
+}
+#preview i{
+    font-size: 20px;
+    padding: 10px;
+}
+
+
+
+/*===create post */
+.middle .create-post{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    background:var(--color-white);
+    padding:0.4rem var(--card-padding);
+    border-radius: var(--border-radius);
+}
+
+.middle .create-post input[type="text"]{
+    justify-self: start;
+    width: 100%;
+    padding-left: 1rem;
+    background: transparent;
+    color: var(--color-dark);
+    margin-right: 1rem;
+
+}
+
+/*=====feed======*/
+
+.middle .feeds .feed{
+    background:var(--color-white);
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    margin: 1rem 0;
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.middle .feeds .feed .head{
+    display: flex;
+    justify-content: space-between;
+}
+
+.middle .feeds .user{
+    display: flex;
+    gap: 1rem;
+}
+.middle .content{
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 20px;
+}
+.middle .feed .photo{
+    border-radius: var(--card-border-radius);
+    overflow: hidden;
+    margin:0.7rem 0;
+    cursor: pointer;
+}
+
+.middle .feed .action-button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4rem;
+    margin: 0.6rem;
+}
+.middle .feed .liked-by{
+    display: flex;
+}
+.middle .feed .liked-by span{
+    width: 1.4rem;
+    height: 1.4rem;
+    display: block;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--color-white);
+    margin-left: -0.6rem;
+}
+
+.middle .feed .liked-by span:first-child{
+    margin:0;
+}
+
+.middle .feed .liked-by p{
+    margin-left: 0.5rem;
+}
+
+/* Media queries for small laptops and big tabs*/
+@media screen and (max-width:1200px) {
+    .container{
+        width:96%;
+    }
+    .main .container{
+        grid-template-columns: 6rem auto 30vw;
+        gap: 1rem;
+    }
+
+    .left{
+        width: 5rem;
+        z-index: 5;
+    }
+    main .container .left .profile{
+        display: none;;
+    }
+    .sidebar h3{
+        display: none;
+    }
+    .left .btn{
+        display: none;
+    }
+}
+
+@media screen and (max-width:992px) {
+   
+    nav .search-bar{
+        display:none;
+    } 
+    main .container{
+        max-width: 100%;
+        grid-template-columns: 0 auto 1rem;
+        overflow-x: hidden;
+    }
+    main .container .left{
+        grid-column: 3/5;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+    }
+    main .container .middle{
+        grid-column: 1/3;
+    }
+    main .container .right{
+        display: none;
+    }
+  
+}

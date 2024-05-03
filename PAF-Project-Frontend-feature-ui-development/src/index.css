@@ -1,0 +1,116 @@
+/* Changes to colors and text styles */
+
+/* Base styles */
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: rgba(0, 0, 0, 0.8); /* Changed text color */
+}
+
+/* Links */
+a {
+  color: #2098f3; /* Changed link color */
+}
+
+a:hover {
+  color: #40a9ff; /* Changed link hover color */
+}
+
+/* Buttons */
+.btn {
+  font-size: 14px;
+  border-radius: 4px;
+  height: 45px;
+  line-height: 45px;
+  color: rgba(0, 0, 0, 0.8); /* Changed button text color */
+  background-color: transparent; /* Changed button background color */
+  border: 1px solid #e8e8e8; /* Changed button border color */
+}
+
+.btn-primary {
+  color: #fff; /* Changed primary button text color */
+  background-color: #2098f3; /* Changed primary button background color */
+  border-color: #2098f3; /* Changed primary button border color */
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active {
+  background-color: #40a9ff; /* Changed primary button hover/focus/active background color */
+  border-color: #40a9ff; /* Changed primary button hover/focus/active border color */
+}
+
+.btn-success {
+  color: #fff; /* Changed success button text color */
+  background-color: #52c41a; /* Changed success button background color */
+  border-color: #52c41a; /* Changed success button border color */
+}
+
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active,
+.btn-success.active {
+  background-color: #52c41a; /* Changed success button hover/focus/active background color */
+  border-color: #52c41a; /* Changed success button hover/focus/active border color */
+}
+
+.btn-link {
+  border: none;
+  height: 34px;
+  padding: 0 15px;
+}
+
+.btn-link:hover {
+  background-color: rgba(158, 158, 158, 0.2);
+}
+
+/* Form */
+.form-item label {
+  color: rgba(0, 0, 0, 0.65); /* Changed form label text color */
+}
+
+.form-control {
+  color: rgba(0, 0, 0, 0.8); /* Changed form control text color */
+  background-color: #fff; /* Changed form control background color */
+  border: 1px solid #e8e8e8; /* Changed form control border color */
+}
+
+.form-control:hover,
+.form-control:focus,
+.form-control:active {
+  border-color: #40a9ff; /* Changed form control hover/focus/active border color */
+}
+
+.form-control:focus,
+.form-control:active {
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2); /* Changed form control focus box shadow */
+}
+
+.form-control.invalid {
+  border-color: #f5222d; /* Changed invalid form control border color */
+}
+
+.form-control.invalid:focus,
+.form-control.invalid:active {
+  box-shadow: 0 0 0 2px rgba(245, 34, 45, 0.2); /* Changed invalid form control focus box shadow */
+}
+
+/* Or separator */
+.or-separator {
+  border-bottom: 1px solid #898989;
+  padding: 10px 0;
+  position: relative;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-size: 1em;
+}
+
+.or-text {
+  position: absolute;
+  left: 46%;
+  top: 0;
+  background: #3c3c3c;
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.649);
+}
