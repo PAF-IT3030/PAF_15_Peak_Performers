@@ -142,7 +142,7 @@ export default function MiddleMealPlan() {
           <div className="profile-photo">
             <img src={profile2} alt="" />
           </div>
-          <p className="name">Shraddha</p>
+          <p className="name">Sameera</p>
         </div>
         <div className="story">
           <div className="profile-photo">
