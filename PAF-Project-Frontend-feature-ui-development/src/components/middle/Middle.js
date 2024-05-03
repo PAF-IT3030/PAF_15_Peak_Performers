@@ -229,7 +229,7 @@ export default function Middle() {
                   <span className="hashtag">#Lifestyle</span>
                 </p>
               </div>
-              <div className="comments text-muted"> view all 27 Coments</div>
+              <div className="comments text-muted"> view all 277 Coments</div>
             </div>
           );
         })}
