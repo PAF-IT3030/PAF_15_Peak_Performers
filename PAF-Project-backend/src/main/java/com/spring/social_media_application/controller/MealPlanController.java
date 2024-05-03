@@ -38,7 +38,8 @@ public class MealPlanController {
      * @return success or fail response of get meal plan
      */
     @GetMapping("/{mealPlanId}")
-    public ResponseEntity<CommonResponse> getMealPlanDetailsById(@PathVariable("mealPlanId") @NotNull String mealPlanId) {
+    public ResponseEntity<CommonResponse> getMealPlanDetailsById(
+            @PathVariable("mealPlanId") @NotNull String mealPlanId) {
         CommonResponse commonResponse = mealPlanService.getMealPlanDetailsById(mealPlanId);
         return new ResponseEntity<>(commonResponse, HttpStatus.OK);
     }
@@ -55,38 +56,4 @@ public class MealPlanController {
         return new ResponseEntity<>(commonResponse, HttpStatus.OK);
     }
 
-    /**
-     * Delete meal plan
-     *
-     * @param mealPlanId - required data for delete meal plan
-     * @return success or fail response of delete meal plan
-     */
-    @DeleteMapping("/{mealPlanId}")
-    public ResponseEntity<CommonResponse> deleteMealPlanById(@PathVariable("mealPlanId") @NotNull String mealPlanId) {
-        CommonResponse commonResponse = mealPlanService.deleteMealPlanById(mealPlanId);
-        return new ResponseEntity<>(commonResponse, HttpStatus.OK);
-    }
-
-    /**
-     * Delete meal plan
-     *
-     * @return success or fail response of delete meal plan
-     */
-    @DeleteMapping("")
-    public ResponseEntity<CommonResponse> deleteMealPlans() {
-        CommonResponse commonResponse = mealPlanService.deleteMealPlans();
-        return new ResponseEntity<>(commonResponse, HttpStatus.OK);
-    }
-
-    /**
-     * Update meal plan
-     *
-     * @param mealPlanDTO - required data for meal plan update
-     * @return success or fail response of meal plan update
-     */
-    @PutMapping("")
-    public ResponseEntity<CommonResponse> updateMealPlan(@Valid @RequestBody MealPlanDTO mealPlanDTO) {
-        CommonResponse commonResponse = mealPlanService.updateMealPlan(mealPlanDTO);
-        return new ResponseEntity<>(commonResponse, HttpStatus.OK);
-    }
 }
