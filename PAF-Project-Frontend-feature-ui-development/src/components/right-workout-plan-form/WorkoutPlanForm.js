@@ -48,17 +48,17 @@ function WorkoutPlanForm() {
 
     craeteWorkoutPlans(workoutPlanRequest)
       .then((response) => {
-        console.log("Save workout plan success!")
-        console.log(response)
+        console.log("Save workout plan success!");
+        console.log(response);
         toast("Workout plan created successfully", {
           type: "success",
         });
       })
       .catch((error) => {
         toast(
-          console.log("Save workout plan failed!: "+error)
-          (error && error.message) ||
-            "Oops! Something went wrong. Please try again!",
+          console.log("Save workout plan failed!: " + error)(
+            error && error.message
+          ) || "Oops! Something went wrong. Please try again!",
           { type: "error" }
         );
       });
@@ -154,7 +154,7 @@ function WorkoutPlanForm() {
       <button type="button" onClick={addRoutine}>
         Add Routine
       </button>
-      <button type="submit">Save Workout Plan</button>
+      <button type="submit">Save Workout Plan new</button>
     </form>
   );
 }
