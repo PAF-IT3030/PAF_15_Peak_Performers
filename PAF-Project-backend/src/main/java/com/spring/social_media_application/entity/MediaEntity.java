@@ -16,7 +16,6 @@ public class MediaEntity {
     @Id
     private String id;
     private String fileName;
-    private String contentType;
     private String description;
     private byte[] data;
 
