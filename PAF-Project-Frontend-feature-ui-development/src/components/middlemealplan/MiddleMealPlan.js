@@ -142,7 +142,7 @@ export default function MiddleMealPlan() {
           <div className="profile-photo">
             <img src={profile2} alt="" />
           </div>
-          <p className="name">Sameera</p>
+          <p className="name">Shraddha</p>
         </div>
         <div className="story">
           <div className="profile-photo">
@@ -154,7 +154,7 @@ export default function MiddleMealPlan() {
           <div className="profile-photo">
             <img src="./images/profile-12.jpg" alt="" />
           </div>
-          <p className="name">Kumar</p>
+          <p className="name">Harsh</p>
         </div>
       </div>
       {/*-story ends here*/}

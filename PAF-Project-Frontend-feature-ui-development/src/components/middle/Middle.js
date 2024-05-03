@@ -220,7 +220,7 @@ export default function Middle() {
                   <img src="./images/profile-11.jpg" />
                 </span>
                 <p>
-                  Liked by <b>Earnest Achiever</b> and 323 others.
+                  Liked by <b>Earnest Achiever</b> and 33 others.
                 </p>
               </div>
               <div className="caption">
