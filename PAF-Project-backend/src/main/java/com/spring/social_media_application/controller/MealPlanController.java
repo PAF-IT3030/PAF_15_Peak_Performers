@@ -79,4 +79,15 @@ public class MealPlanController {
         return new ResponseEntity<>(commonResponse, HttpStatus.OK);
     }
 
+    /**
+     * Update meal plan
+     *
+     * @param mealPlanDTO - required data for meal plan update
+     * @return success or fail response of meal plan update
+     */
+    @PutMapping("")
+    public ResponseEntity<CommonResponse> updateMealPlan(@Valid @RequestBody MealPlanDTO mealPlanDTO) {
+        CommonResponse commonResponse = mealPlanService.updateMealPlan(mealPlanDTO);
+        return new ResponseEntity<>(commonResponse, HttpStatus.OK);
+    }
 }
