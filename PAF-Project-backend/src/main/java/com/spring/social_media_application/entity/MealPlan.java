@@ -24,5 +24,6 @@ public class MealPlan {
     private String name;
     private String description;
     private List<Recipe> recipes;
+    private LocalDateTime createdDate;
     private LocalDateTime lastUpdatedDate;
 }
