@@ -56,4 +56,27 @@ public class MealPlanController {
         return new ResponseEntity<>(commonResponse, HttpStatus.OK);
     }
 
+    /**
+     * Delete meal plan
+     *
+     * @param mealPlanId - required data for delete meal plan
+     * @return success or fail response of delete meal plan
+     */
+    @DeleteMapping("/{mealPlanId}")
+    public ResponseEntity<CommonResponse> deleteMealPlanById(@PathVariable("mealPlanId") @NotNull String mealPlanId) {
+        CommonResponse commonResponse = mealPlanService.deleteMealPlanById(mealPlanId);
+        return new ResponseEntity<>(commonResponse, HttpStatus.OK);
+    }
+
+    /**
+     * Delete meal plan
+     *
+     * @return success or fail response of delete meal plan
+     */
+    @DeleteMapping("")
+    public ResponseEntity<CommonResponse> deleteMealPlans() {
+        CommonResponse commonResponse = mealPlanService.deleteMealPlans();
+        return new ResponseEntity<>(commonResponse, HttpStatus.OK);
+    }
+
 }
