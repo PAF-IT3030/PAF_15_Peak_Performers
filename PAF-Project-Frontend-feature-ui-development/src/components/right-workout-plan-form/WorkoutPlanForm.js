@@ -154,7 +154,7 @@ function WorkoutPlanForm() {
       <button type="button" onClick={addRoutine}>
         Add Routine
       </button>
-      <button type="submit">Save Workout Plan new</button>
+      <button type="submit">Save Workout Plan</button>
     </form>
   );
 }
