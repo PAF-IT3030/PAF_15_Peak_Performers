@@ -125,7 +125,7 @@ public class MediaController {
      *
      * @return success or fail response of delete images
      */
-    @DeleteMapping("/delete/allMedia")
+    @DeleteMapping("/delete/media")
     public ResponseEntity<CommonResponse> deleteImage() {
         CommonResponse commonResponse = mediaService.deleteAllMedia();
         return new ResponseEntity<>(commonResponse, HttpStatus.OK);
