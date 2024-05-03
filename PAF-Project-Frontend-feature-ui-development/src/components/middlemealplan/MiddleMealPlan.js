@@ -6,10 +6,7 @@ import PostService from "../../Services/PostService";
 import profile1 from "../../images/profile-11.jpg";
 import profile2 from "../../images/profile-12.jpg";
 import profile3 from "../../images/profile-13.jpg";
-import {
-  deleteMealPlanById,
-  getAllMealPlans,
-} from "../../util/APIUtils";
+import { deleteMealPlanById, getAllMealPlans } from "../../util/APIUtils";
 import { toast } from "react-toastify";
 export default function MiddleMealPlan() {
   const [mealPlans, setMealtPlans] = useState([]);
@@ -157,7 +154,7 @@ export default function MiddleMealPlan() {
           <div className="profile-photo">
             <img src="./images/profile-12.jpg" alt="" />
           </div>
-          <p className="name">Harsh</p>
+          <p className="name">Kumar</p>
         </div>
       </div>
       {/*-story ends here*/}
@@ -238,9 +235,7 @@ export default function MiddleMealPlan() {
                 </span>
               </div>
               <div className="content">{post.description}</div>
-              <div className="photo">
-                {/* <img src={profile2} alt="" /> */}
-              </div>
+              <div className="photo">{/* <img src={profile2} alt="" /> */}</div>
               <div
                 className="caption"
                 style={{
