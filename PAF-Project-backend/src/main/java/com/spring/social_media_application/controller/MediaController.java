@@ -32,7 +32,8 @@ public class MediaController {
      * @return success or fail response of upload image
      */
     @PostMapping("/upload/image")
-    public ResponseEntity<CommonResponse> uploadImage(@RequestParam("file") MultipartFile file, @RequestParam("description") String description) {
+    public ResponseEntity<CommonResponse> uploadImage(@RequestParam("file") MultipartFile file,
+            @RequestParam("description") String description) {
         try {
             MediaDTO mediaDTO = new MediaDTO();
             mediaDTO.setFile(file);
@@ -54,7 +55,8 @@ public class MediaController {
      * @return success or fail response of upload video
      */
     @PostMapping("/upload/video")
-    public ResponseEntity<CommonResponse> uploadVideo(@RequestParam("file") MultipartFile file, @RequestParam("description") String description) {
+    public ResponseEntity<CommonResponse> uploadVideo(@RequestParam("file") MultipartFile file,
+            @RequestParam("description") String description) {
         try {
             MediaDTO mediaDTO = new MediaDTO();
             mediaDTO.setFile(file);
@@ -78,7 +80,8 @@ public class MediaController {
     @GetMapping(value = "/download/image/{id}", produces = MediaType.IMAGE_JPEG_VALUE)
     public ResponseEntity<byte[]> downloadImage(@PathVariable String id) {
         Optional<byte[]> imageData = mediaService.getImageData(id);
-        return imageData.map(bytes -> ResponseEntity.ok().body(bytes)).orElseGet(() -> ResponseEntity.notFound().build());
+        return imageData.map(bytes -> ResponseEntity.ok().body(bytes))
+                .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
     /**
@@ -101,7 +104,8 @@ public class MediaController {
     @GetMapping(value = "/download/video/{id}", produces = MediaType.APPLICATION_OCTET_STREAM_VALUE)
     public ResponseEntity<byte[]> downloadVideo(@PathVariable String id) {
         Optional<byte[]> videoData = mediaService.getVideoData(id);
-        return videoData.map(bytes -> ResponseEntity.ok().body(bytes)).orElseGet(() -> ResponseEntity.notFound().build());
+        return videoData.map(bytes -> ResponseEntity.ok().body(bytes))
+                .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
     /**
@@ -116,14 +120,4 @@ public class MediaController {
         return new ResponseEntity<>(commonResponse, HttpStatus.OK);
     }
 
-    /**
-     * Delete images
-     *
-     * @return success or fail response of delete images
-     */
-    @DeleteMapping("/delete/allMedia")
-    public ResponseEntity<CommonResponse> deleteImage() {
-        CommonResponse commonResponse = mediaService.deleteAllMedia();
-        return new ResponseEntity<>(commonResponse, HttpStatus.OK);
-    }
 }
