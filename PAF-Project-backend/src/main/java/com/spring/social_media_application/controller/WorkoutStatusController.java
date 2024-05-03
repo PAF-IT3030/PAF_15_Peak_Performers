@@ -6,9 +6,9 @@ import com.spring.social_media_application.service.WorkoutStatusService;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
+import lombok.extern.slf4j.Slf4;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponhfhjfjhjyfhnseEntity;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
