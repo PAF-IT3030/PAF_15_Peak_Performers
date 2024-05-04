@@ -22,9 +22,8 @@ export default function SignUp() {
         email: values.email,
         gender: values.gender.toUpperCase(),
         phone: values.phone,
-        password: values.pass
+        password: values.pass,
       };
-      
 
       console.log(values);
       UserService.PostFormData(requestData);

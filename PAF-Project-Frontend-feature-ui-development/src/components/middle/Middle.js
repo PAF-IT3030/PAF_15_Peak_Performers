@@ -98,31 +98,37 @@ export default function Middle() {
       <div className="stories">
         <div className="story">
           <div className="profile-photo">
-            <img src={profilepic} alt="" />
+            <img src={profilepic} alt="Profile picture of Darshan" />
           </div>
           <p className="name">Darshan</p>
         </div>
         <div className="story">
           <div className="profile-photo">
-            <img src="./images/profile-15.jpg" alt="" />
+            <img src="./images/profile-15.jpg" alt="Profile picture of Ashu" />
           </div>
           <p className="name">Ashu</p>
         </div>
         <div className="story">
           <div className="profile-photo">
-            <img src="./images/profile-14.jpg" alt="" />
+            <img
+              src="./images/profile-14.jpg"
+              alt="Profile picture of Shraddha"
+            />
           </div>
           <p className="name">Shraddha</p>
         </div>
         <div className="story">
           <div className="profile-photo">
-            <img src="./images/profile-13.jpg" alt="" />
+            <img
+              src="./images/profile-13.jpg"
+              alt="Profile picture of Ananya"
+            />
           </div>
           <p className="name">Ananya</p>
         </div>
         <div className="story">
           <div className="profile-photo">
-            <img src="./images/profile-12.jpg" alt="" />
+            <img src="./images/profile-12.jpg" alt="Profile picture of Harsh" />
           </div>
           <p className="name">Harsh</p>
         </div>
@@ -130,16 +136,14 @@ export default function Middle() {
       {/*-story ends here*/}
       <form onSubmit={onFileUpload} className="create-post">
         <div className="profile-photo">
-          <img src={profilepic} alt="profile-photo" />
+          <img src={profilepic} alt="Profile picture of the current user" />
         </div>
         <input
           type="text"
           value={description}
           onChange={onDescriptionChange}
-          // value={content}
-          placeholder="what's on your mind Nishi?"
+          placeholder="What's on your mind?"
           id="create-post"
-          // onChange={(event) => setContent(event.target.value)}
         />
         <div className="attach">
           <span>
@@ -160,8 +164,7 @@ export default function Middle() {
         <span onClick={handleClosePreview}>
           <i className="uil uil-multiply"></i>
         </span>
-        <img src={imageUrl}></img>
-        {/* <div className="button"> <button type="submit" defaultValue="post" className="btn btn-primary" >Post</button></div> */}
+        <img src={imageUrl} alt="Preview of the uploaded image"></img>
       </div>
 
       {/*----------------Feeds-------------------*/}
@@ -173,7 +176,7 @@ export default function Middle() {
               <div className="head">
                 <div className="user">
                   <div className="profile-photo">
-                    <img src={profilepic} alt="profile-photo" />
+                    <img src={profilepic} alt="Profile picture of Lana Rose" />
                   </div>
                   <div className="info">
                     <h3>Lana Rose</h3>
@@ -189,7 +192,7 @@ export default function Middle() {
                 <p>{post.description}</p>
               </div>
               <div className="photo">
-                <img src={post.data} alt="" />
+                <img src={post.data} alt="Post image" />
               </div>
               <div className="action-button">
                 <div className="interation-buttons">
@@ -211,13 +214,22 @@ export default function Middle() {
               </div>
               <div className="liked-by">
                 <span>
-                  <img src="./images/profile-11.jpg" />
+                  <img
+                    src="./images/profile-11.jpg"
+                    alt="Profile picture of a user who liked the post"
+                  />
                 </span>
                 <span>
-                  <img src="./images/profile-11.jpg" />
+                  <img
+                    src="./images/profile-11.jpg"
+                    alt="Profile picture of a user who liked the post"
+                  />
                 </span>
                 <span>
-                  <img src="./images/profile-11.jpg" />
+                  <img
+                    src="./images/profile-11.jpg"
+                    alt="Profile picture of a user who liked the post"
+                  />
                 </span>
                 <p>
                   Liked by <b>Earnest Achiever</b> and 323 others.
